@@ -12,5 +12,10 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect()->route('menu-items.index');
 });
+
+Route::resource('menu-items', 'MenuItemController');
+Route::resource('employees', 'EmployeeController');
+Route::resource('dining-tables', 'DiningTableController');
+Route::resource('reservations', 'ReservationController');
